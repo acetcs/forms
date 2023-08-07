@@ -1,21 +1,19 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js"></script>
-</head>
-<style>
+    <title>Join the Club</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+  </head>
+  <style>
     .alert{
-        flex: none;
+        display: none;
     }
-    </style>
-<body>
+  </style>
+  <body>
     <div class="formbold-main-wrapper" action="acet-codingclub.web.app">
         <!-- Author: FormBold Team -->
         <!-- Learn More: https://formbold.com -->
@@ -23,12 +21,11 @@
 
             <img src="https://i.ibb.co/mG4hbpL/4401280-removebg-preview.png">
 
-            <form id="contactForm" >
+            <form id="contactForm" action="https://acet-codingclub.web.app/" method="POST"   >
                 <div class="formbold-form-title">
-                    <h2 class="">Be a Member now</h2>
+                    <h2 class="">Be a Member of our coding club</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt.
+                        🎉 Welcome to our inaugural coding club! 🚀 Join us on an exciting journey of learning and innovation. To become a part of this vibrant community, simply sign up and register. If you don't already have a <a style="text-decoration: none" href="https://github.com/join">GitHub account</a>, no worries! Creating one is essential to fully engage with our club's projects and activities. Let's embark on this coding adventure together.<br> <b>Join now and let your coding odyssey begin!</b> 🖥️💡
                     </p>
                 </div>
 
@@ -37,22 +34,22 @@
                         <label for="firstname" class="formbold-form-label">
                             First name
                         </label>
-                        <input type="text" name="firstname" id="firstname" class="formbold-form-input" />
+                        <input type="text" name="firstname" id="firstname" class="formbold-form-input" required/>
                     </div>
                     <div>
                         <label for="lastname" class="formbold-form-label"> Last name </label>
-                        <input type="text" name="lastname" id="lastname" class="formbold-form-input" />
+                        <input type="text" name="lastname" id="lastname" class="formbold-form-input" required/>
                     </div>
                 </div>
 
                 <div class="formbold-input-flex">
                     <div>
                         <label for="text" class="formbold-form-label"> Department & Year <i>eg. cse-4</i></label>
-                        <input type="text" name="email" id="department" class="formbold-form-input" />
+                        <input type="text" name="email" id="department" class="formbold-form-input" required/>
                     </div>
                     <div>
                         <label for="phone" class="formbold-form-label"> Phone number </label>
-                        <input type="number" name="phone" id="phone" class="formbold-form-input" />
+                        <input type="number" name="phone" id="phone" class="formbold-form-input" required/>
                     </div>
                 </div>
 
@@ -60,13 +57,13 @@
                     <label for="address" class="formbold-form-label">
                         Github username or github user url <i>eg. https://github.com/saifrahmn</i>
                     </label>
-                    <input type="text" name="address" id="git" class="formbold-form-input" />
+                    <input type="text" name="address" id="git" class="formbold-form-input" required/>
                 </div>
 
 
 
 
-                <button type="submit" class="formbold-btn">Register Now</button>
+                <button type="submit" class="formbold-btn">Join Now</button>
             </form>
         </div>
     </div>
@@ -230,10 +227,26 @@
         .formbold-btn:hover {
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
         }
+        @media screen and (max-width: 768px) {
+        /* Adjustments for smaller screens */
+        .formbold-form-wrapper {
+            padding: 20px;
+        }
+        .formbold-input-flex {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .formbold-form-input {
+            padding: 10px;
+        }
+        .formbold-mb-3 {
+            margin-bottom: 10px;
+        }
+    }
     </style>
     </form>
     <script src="app.js"></script>
-    </script>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
 </html>
