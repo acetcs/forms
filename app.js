@@ -39,6 +39,11 @@ form.addEventListener("submit",(e)=>{
         git:git
     })
 
+    alert.style.display="block"
+
+    setTimeout(()=>{
+        alert.style.display="none"
+    },10000)
 
     form.reset()
 
