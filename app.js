@@ -38,13 +38,6 @@ form.addEventListener("submit",(e)=>{
         phone:phone,
         git:git
     })
-
-    alert.style.display="block"
-
-    setTimeout(()=>{
-        alert.style.display="none"
-    },10000)
-
-    form.reset()
+    window.location.href="https://acet-codingclub.web.app/members/group.html"
 
 })
