@@ -38,6 +38,6 @@ form.addEventListener("submit",(e)=>{
         phone:phone,
         git:git
     })
-    window.location.href="https://acet-codingclub.web.app/members/group.html"
+    window.location.href="./example.html"
 
 })
